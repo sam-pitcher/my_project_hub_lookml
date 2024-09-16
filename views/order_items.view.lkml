@@ -98,5 +98,6 @@ view: order_items {
   dimension: random {
     # comment
     # second comment
+    # third comment
   }
 }
