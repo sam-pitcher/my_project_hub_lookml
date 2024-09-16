@@ -94,4 +94,6 @@ view: order_items {
     type: number
     sql: ${TABLE}.user_id ;;
   }
+
+  dimension: random {}
 }
