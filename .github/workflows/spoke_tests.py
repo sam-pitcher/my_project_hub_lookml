@@ -23,6 +23,18 @@ sdk.deploy_ref_to_production(project_id=hub_project_id, branch=git_branch)
 body = {"workspace_id": "dev"}
 sdk.update_session(body)
 
+# create and check out new branch in spoke
+branch_name = "hub_test"
+try:
+  response = sdk.create_git_branch(
+    spoke_project_id,
+    body=looker_sdk.models40.WriteGitBranch(
+        name=branch_name
+    ))
+  print(response)
+except:
+  print(f"branch: {branch_name} doesn't exist")
+
 # update dependancies in spoke project with new deployed code from hub
 sdk.lock_all(spoke_project_id)
 
@@ -30,6 +42,11 @@ sdk.lock_all(spoke_project_id)
 project_validation = sdk.validate_project(spoke_project_id)
 print(f"Errors: {project_validation.errors}")
 print(f"Models not validated: {project_validation.models_not_validated}")
+
+# delete new branch in spoke
+response = sdk.delete_git_branch(
+    project_id=spoke_project_id,
+    branch_name="sdfsdf")
 
 # if no errors, print No errors
 if not project_validation.errors:
