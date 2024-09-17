@@ -95,9 +95,9 @@ view: order_items {
     sql: ${TABLE}.user_id ;;
   }
 
-  dimension: random {
-    # comment
-    # second comment
-    # third comment
-  }
+  # dimension: random {
+  #   # comment
+  #   # second comment
+  #   # third comment
+  # }
 }
