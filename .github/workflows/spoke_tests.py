@@ -5,6 +5,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 hub_commit_sha = os.getenv('GITHUB_COMMIT_SHA')
 git_branch = os.getenv('GITHUB_BRANCH')
+print(F"Current git branch: {git_branch}")
 
 
 # env variables have been declared in the yaml file
