@@ -90,6 +90,8 @@ view: order_items {
   #   sql: ${TABLE}.status ;;
   # }
 
+  # comment
+
   dimension: user_id {
     type: number
     sql: ${TABLE}.user_id ;;
