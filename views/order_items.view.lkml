@@ -90,7 +90,7 @@ view: order_items {
   #   sql: ${TABLE}.status ;;
   # }
 
-  # comment
+  # comment 2
 
   dimension: user_id {
     type: number
