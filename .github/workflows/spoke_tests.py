@@ -31,7 +31,7 @@ print(f"Errors: {project_validation.errors}")
 print(f"Models not validated: {project_validation.models_not_validated}")
 
 # revert back to master branch in hub
-sdk.deploy_ref_to_production(project_id=hub_project_id, branch='master')
+# sdk.deploy_ref_to_production(project_id=hub_project_id, branch='master')
 
 
 
