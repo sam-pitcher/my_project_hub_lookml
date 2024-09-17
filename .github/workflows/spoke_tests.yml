@@ -30,4 +30,4 @@ jobs:
           LOOKERSDK_API_VERSION: '4.0'
           LOOKERSDK_TIMEOUT: "120"
           GITHUB_COMMIT_SHA: ${{ github.sha }}
-          GITHUB_BRANCH: ${{ github.base_ref }}
+          GITHUB_BRANCH: ${{ github.head_ref }}
