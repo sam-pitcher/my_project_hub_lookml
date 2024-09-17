@@ -9,15 +9,15 @@ print(F"Current git branch: {git_branch}")
 
 
 # env variables have been declared in the yaml file
-# instance = 'test.looker.shredr.xyz/'  # host name e.g. 'mydomain.looker.com'
+instance = 'test.looker.shredr.xyz/'  # host name e.g. 'mydomain.looker.com'
 
-# sdk = looker_sdk.init40()
+sdk = looker_sdk.init40()
 
-# spoke_project_id="my_project_spoke"
-# hub_project_id="my_project_hub"
+spoke_project_id="my_project_spoke"
+hub_project_id="my_project_hub"
 
 # briefly deploy new code to production in dev instance
-# sdk.deploy_ref_to_production(project_id=hub_project_id, branch=git_branch)
+sdk.deploy_ref_to_production(project_id=hub_project_id, branch=git_branch)
 
 # change to dev mode in dev instance
 # body = {"workspace_id": "dev"}
