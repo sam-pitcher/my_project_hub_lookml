@@ -85,12 +85,10 @@ view: order_items {
     sql: ${TABLE}.shipped_at ;;
   }
 
-  # dimension: status {
-  #   type: string
-  #   sql: ${TABLE}.status ;;
-  # }
-
-  # comment 2
+  dimension: status {
+    type: string
+    sql: ${TABLE}.status ;;
+  }
 
   dimension: user_id {
     type: number
