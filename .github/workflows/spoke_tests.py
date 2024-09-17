@@ -46,7 +46,7 @@ print(f"Models not validated: {project_validation.models_not_validated}")
 # delete new branch in spoke
 response = sdk.delete_git_branch(
     project_id=spoke_project_id,
-    branch_name="sdfsdf")
+    branch_name=branch_name)
 
 # if no errors, print No errors
 if not project_validation.errors:
